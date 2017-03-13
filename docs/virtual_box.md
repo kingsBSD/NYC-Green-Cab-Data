@@ -52,14 +52,6 @@ on your laptop talking to each other. This will require using "Host Only" networ
 
 Go to the "preferences" option in VirtualBox, select "Network", then the "Host-only Networks" tab, and create a host-only network.
 
-### All Done!
-
-It should now be possible to start a cluster on one virtual machine, and give its IP address to another in order to
-join it. You can then start a Jupyter notebook server via PySpark, and start playing with the data.
-
-![Spark cluster](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_1.png)
-
-
 ![host-only network](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_10.png)
 
 Now find the settings for your virtual machine. Under the "Network" option, select the host-only adapter you created.
@@ -80,5 +72,15 @@ new IP address:
 In this case, the IP address is `192.168.56.102`. Restart the Docker container with `./ananke/run-data.sh /home/ananke/data`.
 The web-app would be at `http://192.168.56.102`. Do the same for the other virtual machine.
 
+
+
+
+
+### All Done!
+
+It should now be possible to start a cluster on one virtual machine, and give its IP address to another in order to
+join it. You can then start a Jupyter notebook server via PySpark, and start playing with the data.
+
+![Spark cluster](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_1.png)
 
 

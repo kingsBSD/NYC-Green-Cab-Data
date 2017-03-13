@@ -6,7 +6,8 @@ If you have received Ananke as a VirtualBox `.ovs` appliance, the first stage is
 Before you start using it properly, it's a good idea to update the Docker image it contains. Start the virtual machine, log-in as "ananke"
 with password "ananke" and do the following:
 
-![updating the Docker inage][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_8.png]
+![updating the Docker inage](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_8.png)
+
 
 ```
 cd ananke
@@ -33,7 +34,7 @@ mkdir data
 
 You can now visit `http;//localhost:5000` and start Jupyter on PySpark on a single Spark node. Go to the Jupyter notebook and start uploading files:
 
-![Uploading data into Jupyter][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/ananke_08.png]
+![Uploading data into Jupyter](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/ananke_08.png)
 
 It's now safe to stop the Docker container with `control-C`. Type `ls data/`, and you'll see everything you uploaded is still there.
 If you restart the container with `./ananke/run-data.sh /home/ananke/data` and restart Jupyter, all the files will be where you left them.
@@ -56,26 +57,25 @@ Go to the "preferences" option in VirtualBox, select "Network", then the "Host-o
 It should now be possible to start a cluster on one virtual machine, and give its IP address to another in order to
 join it. You can then start a Jupyter notebook server via PySpark, and start playing with the data.
 
-![Spark cluster][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_1.png]
+![Spark cluster](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_1.png)
 
 
-
-![host-only netwok][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_10.png]
+![host-only network](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_10.png)
 
 Now find the settings for your virtual machine. Under the "Network" option, select the host-only adapter you created.
 
-![add host adapter][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_12.png]
+![add host adapter](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_12.png)
 
 #### Cloning the Virtual Machine
 
 Now your VM needs another one to talk to. Select the "clone" option from the "Machine" menu:
 
-![Cloning a VM][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_13.png]
+![Cloning a VM](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_13.png)
 
 Start both the machines and log-in. "localhost" won't point to "localhost" anymore, type `ifcongig` to find out the machine's
 new IP address:
 
-![ifconfig][https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_14.png]
+![ifconfig](https://raw.githubusercontent.com/kingsBSD/NYC-Green-Cab-Data/master/docs/img/slave_14.png)
 
 In this case, the IP address is `192.168.56.102`. Restart the Docker container with `./ananke/run-data.sh /home/ananke/data`.
 The web-app would be at `http://192.168.56.102`. Do the same for the other virtual machine.

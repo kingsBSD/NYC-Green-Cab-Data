@@ -7,7 +7,7 @@ also a smaller set of [larger files](large_files.md) for use with HDFS.
 There are Jupyter notebooks available as a guide to experimenting with the data using Apache Spark:
 
 * By uploading the data into [Jupyter](https://github.com/kingsBSD/NYC-Green-Cab-Data/blob/master/nyc_green_cab.ipynb)
-* By uploading the data into (HDFS)[https://github.com/kingsBSD/NYC-Green-Cab-Data/blob/master/nyc_green_cab_hdfs.ipynb]
+* By uploading the data into [HDFS](https://github.com/kingsBSD/NYC-Green-Cab-Data/blob/master/nyc_green_cab_hdfs.ipynb)
 
 There are [instructions](docs/virtual_box.md) for setting up [Ananke](https://github.com/kingsBSD/ananke), our Apache Spark Docker image.
 
